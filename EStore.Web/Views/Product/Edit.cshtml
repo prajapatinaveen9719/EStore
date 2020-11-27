@@ -1,0 +1,35 @@
+﻿@model EStore.Entities.Product
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm("Edit", "Product", FormMethod.Post))
+{
+
+<table>
+    @Html.HiddenFor(x => x.ID)
+    <tr>
+        <td>Name</td>
+        <td>@Html.TextBoxFor(x => x.Name)</td>
+    </tr>
+
+    <tr>
+        <td>Description</td>
+        <td>@Html.TextBoxFor(x => x.Description)</td>
+    </tr>
+    <tr>
+        <td>Price</td>
+        <td>@Html.TextBoxFor(x => x.Price)</td>
+    </tr>
+
+
+    <tr>
+        <td></td>
+        <td><input type="submit" value="Save" /></td>
+    </tr>
+</table>
+
+}

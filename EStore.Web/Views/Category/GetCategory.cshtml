@@ -1,0 +1,28 @@
+﻿@model List<EStore.Entities.Category>
+
+@{
+    ViewBag.Title = "GetCategory";
+}
+
+<table class=" table table-striped" >
+
+    <tr>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Action</td>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.Name</td>
+    <td>@item.Description</td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { catID = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { ID = item.ID })
+    </td>
+</tr>
+    }
+    </table>
+

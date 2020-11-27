@@ -1,0 +1,28 @@
+﻿@model EStore.Entities.Category
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm("Create","Category",FormMethod.Post))
+{
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>@Html.TextBoxFor(x => x.Name)</td>
+    </tr>
+
+    <tr>
+        <td>Description</td>
+        <td>@Html.TextBoxFor(x => x.Description)</td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><input type="submit"  value="Save"/></td>
+    </tr>
+</table>
+
+}
+
